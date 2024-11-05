@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
 import { formatter } from "@/lib/utils";
-import { CreditCardIcon, DollarSignIcon, Package } from "lucide-react";
+import { CreditCardIcon, PhilippinePesoIcon, Package } from "lucide-react";
 
 interface DashboardPageProps {
     params: { storeId: string }
@@ -32,7 +32,7 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                             <CardTitle className="text-sm font-medium">
                                 Total Revenue
                             </CardTitle>
-                            <DollarSignIcon className="h-4 w-4 text-muted-foreground" />
+                            <PhilippinePesoIcon className="h-4 w-4 text-muted-foreground" />
                         </CardHeader>
                         <CardContent>
                             <div className="text-2xl font-bold">

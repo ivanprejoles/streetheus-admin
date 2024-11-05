@@ -35,8 +35,6 @@ export async function POST(req: Request) {
 
   const addressString = addressComponents.filter((c) => c !== null).join(', ');
 
-  console.log(addressString);
-
   if (event.type === "checkout.session.completed") {
     const order = await prismadb.order.update({
       where: {
@@ -51,8 +49,6 @@ export async function POST(req: Request) {
         orderItems: true,
       }
     });
-
-    console.log(order.address, order.phone, order.isPaid)
 
     const productIds = order.orderItems.map((orderItem) => orderItem.productId);
 

@@ -12,8 +12,8 @@ import { ThemeProvider } from '@/providers/theme-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Admin Dashboard',
-  description: 'Admin Dashboard',
+  title: 'Streetheus | Admin',
+  description: 'Streetheus admin dashboard for private use.',
 }
 
 export default function RootLayout({
