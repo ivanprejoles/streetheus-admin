@@ -74,6 +74,7 @@ export async function POST(
     return NextResponse.json(newOrder, { headers: corsHeaders });
     
   } catch (error) {
-    
+        console.log('[CHECKOUT_POST]', error);
+        return new NextResponse("Internal Error", { status: 500 });
   }
 }

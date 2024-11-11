@@ -30,18 +30,18 @@ export const BillboardClient: React.FC<BillboardClientProps> = ({
                     title={`Billboards (${data.length})`}
                     description="Manage billboards for your store"
                 />
-                <Button size={isMobile ? "icon" : "default"} onClick={() => router.push(`/${params.storeId}/billboards/new`)}>
-                    {isMobile ? (<Plus className="h-4 w-4" />) : (<Plus className="mr-2 h-4 w-4" />)}
+                <Button className="text-white bg-gradient-to-r from-indigo-500 to-purple-500" size={isMobile ? "icon" : "default"} onClick={() => router.push(`/${params.storeId}/billboards/new`)}>
+                    {isMobile ? (<Plus className="h-4 w-4 " />) : (<Plus className="mr-2 h-4 w-4" />)}
                     {!isMobile && "Add New"}
                 </Button>
             </div>
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <DataTable columns={columns} data={data} searchKey="label" />
             <Heading
                 title="API"
                 description="API calls for Billboards"
             />
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <ApiList entityName="billboards" entityIdName="billboardId" />
         </>
     )

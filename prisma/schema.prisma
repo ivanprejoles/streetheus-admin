@@ -119,7 +119,6 @@ model Order {
   id         String       @id @default(uuid())
   storeId    String
   store      Store        @relation("StoreToOrder", fields: [storeId], references: [id])
-  orderItems OrderItems[]
   isPaid     Boolean      @default(false)
   phone      String       @default("")
   address    String       @default("")
@@ -128,8 +127,27 @@ model Order {
   name       String       @default("")
   createdAt  DateTime     @default(now())
   updatedAt  DateTime     @updatedAt
+  orderItems OrderItems[]
+  Payment    Payment[]
 
   @@index([storeId])
+}
+
+model Payment {
+  id        String   @id @default(uuid())
+  orderId   String
+  email     String
+  phone     String
+  address   String
+  name      String
+  imageSrc  String
+  date      DateTime
+  amount    Float
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([orderId])
 }
 
 model OrderItems {

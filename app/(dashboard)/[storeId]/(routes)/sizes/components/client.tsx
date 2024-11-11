@@ -35,13 +35,13 @@ export const SizeClient: React.FC<SizeClientProps> = ({
                     {!isMobile && "Add New"}
                 </Button>
             </div>
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <DataTable columns={columns} data={data} searchKey="name" />
             <Heading
                 title="API"
                 description="API calls for Sizes"
             />
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <ApiList entityName="sizes" entityIdName="sizeId" />
         </>
     )

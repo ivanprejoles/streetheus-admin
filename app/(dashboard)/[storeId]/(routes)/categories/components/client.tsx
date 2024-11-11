@@ -32,16 +32,16 @@ export const CategoryClient: React.FC<CategoryClientProps> = ({
                 />
                 <Button size={isMobile ? "icon" : "default"} onClick={() => router.push(`/${params.storeId}/categories/new`)}>
                     {isMobile ? (<Plus className="h-4 w-4" />) : (<Plus className="mr-2 h-4 w-4" />)}
-                    {!isMobile && "Add New"}
+            {!isMobile && "Add New"}
                 </Button>
             </div>
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <DataTable columns={columns} data={data} searchKey="name" />
             <Heading
                 title="API"
                 description="API calls for Categories"
             />
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <ApiList entityName="categories" entityIdName="categoryId" />
         </>
     )

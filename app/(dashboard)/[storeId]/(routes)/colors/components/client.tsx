@@ -35,13 +35,13 @@ export const ColorClient: React.FC<ColorClientProps> = ({
                     {!isMobile && "Add New"}
                 </Button>
             </div>
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <DataTable columns={columns} data={data} searchKey="name" />
             <Heading
                 title="API"
                 description="API calls for Colors"
             />
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <ApiList entityName="colors" entityIdName="colorId" />
         </>
     )

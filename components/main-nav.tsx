@@ -85,8 +85,8 @@ export function MainNav({
                                             <Link
                                                 href={route.href}
                                                 className={cn(
-                                                    "text-sm font-medium transition-colors hover:text-primary",
-                                                    route.active ? "text-black dark:text-white" : "text-muted-foreground"
+                                                    "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-purple-500 hover:via-violet-500 hover:to-pink-500",
+                                                    route.active ? "relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500" : "text-muted-foreground"
                                                 )}
                                             >
                                                 {route.label}
@@ -107,8 +107,8 @@ export function MainNav({
                                 key={route.href}
                                 href={route.href}
                                 className={cn(
-                                    "text-sm font-medium transition-colors hover:text-primary",
-                                    route.active ? "text-black dark:text-white" : "text-muted-foreground"
+                                    "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-purple-500 hover:via-violet-500 hover:to-pink-500",
+                                    route.active ? "relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500" : "text-muted-foreground"
                                 )}
                             >
                                 {route.label}

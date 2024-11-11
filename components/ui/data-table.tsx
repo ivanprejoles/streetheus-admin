@@ -23,6 +23,7 @@ import {
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Image from "next/image"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -60,14 +61,14 @@ export function DataTable<TData, TValue>({
           onChange={(event) =>
             table.getColumn(searchKey)?.setFilterValue(event.target.value)
           }
-          className="max-w-sm"
+          className="max-w-sm border-fuchsia-500"
         />
       </div>
-      <div className="rounded-md border">
+      <div className="rounded-md border border-fuchsia-500">
         <Table>
-          <TableHeader>
+          <TableHeader className="border-fuchsia-500">
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id}>
+              <TableRow key={headerGroup.id} className="border-fuchsia-500">
                 {headerGroup.headers.map((header) => {
                   return (
                     <TableHead key={header.id}>
@@ -92,7 +93,18 @@ export function DataTable<TData, TValue>({
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      {cell.column.id === "imageSrc" ? (
+                        <div className="w-full h-full aspect-square relative rounded-md overflow-hidden">
+                            <Image
+                              src={cell.getValue() as string}
+                              alt="Product"
+                              layout="fill"
+                              className="object-cover"
+                            />
+                        </div>
+                      ) : (
+                        flexRender(cell.column.columnDef.cell, cell.getContext())
+                      )}
                     </TableCell>
                   ))}
                 </TableRow>

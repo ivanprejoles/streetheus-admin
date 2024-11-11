@@ -35,13 +35,13 @@ export const ProductClient: React.FC<ProductClientProps> = ({
                     {!isMobile && "Add New"}
                 </Button>
             </div>
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <DataTable columns={columns} data={data} searchKey="name" />
             <Heading
                 title="API"
                 description="API calls for Products"
             />
-            <Separator />
+            <Separator className="bg-fuchsia-500"/>
             <ApiList entityName="products" entityIdName="productId" />
         </>
     )

@@ -1,6 +1,6 @@
 "use client"
 
-import { OrderColumn, columns } from "./columns"
+import { OrderColumn, PaymentColumn, columns, paymentColumns } from "./columns"
 
 import { Heading } from "@/components/ui/heading"
 import { Separator } from "@/components/ui/separator"
@@ -8,10 +8,12 @@ import { DataTable } from "@/components/ui/data-table"
 
 interface OrderClientProps {
     data: OrderColumn[]
+    payment: PaymentColumn[]
 }
 
 export const OrderClient: React.FC<OrderClientProps> = ({
-    data
+    data,
+    payment,
 }) => {
 
     return (    
@@ -22,6 +24,12 @@ export const OrderClient: React.FC<OrderClientProps> = ({
             />
             <Separator />
             <DataTable columns={columns} data={data} searchKey="products" />
+            <Heading
+                title={`Payment Confirmation (${data.length})`}
+                description="Manage payment confirmation for your store"
+            />
+            <Separator />
+            <DataTable columns={paymentColumns} data={payment} searchKey="products" />
         </>
     )
 }

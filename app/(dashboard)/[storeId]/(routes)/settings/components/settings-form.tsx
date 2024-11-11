@@ -96,7 +96,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
                     <Trash className="h-4 w-4" />
                 </Button>
             </div>
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full">
                     <div className="grid grid-cols-3 gap-8">
@@ -107,19 +107,19 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
                                 <FormItem>
                                     <FormLabel>Name</FormLabel>
                                     <FormControl>
-                                        <Input className="md:w-full w-60" disabled={loading} placeholder="Store mame" {...field} />
+                                        <Input className="md:w-full w-60 border-fuchsia-500" disabled={loading} placeholder="Store mame" {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
                             )}
                         />
                     </div>
-                    <Button disabled={loading} className="ml-auto" type="submit">
+                    <Button disabled={loading} className="ml-auto text-white bg-gradient-to-r from-indigo-500 to-purple-500" type="submit">
                         Save Changes
                     </Button>
                 </form>
             </Form>
-            <Separator />
+            <Separator className="bg-fuchsia-500" />
             <ApiAlert
                 title="NEXT_PUBLIC_API_URL"
                 description={`${origin}/api/${params.storeId}`}

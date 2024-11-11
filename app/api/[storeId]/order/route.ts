@@ -24,6 +24,23 @@ export async function GET(
                         product: true,
                     },
                 },
+                Payment: {
+                    select: {
+                        id: true,
+                        orderId: true,
+                        address: true,
+                        amount: true,
+                        date: true,
+                        email: true,
+                        imageSrc: true,
+                        name: true,
+                        phone: true,
+                        
+                    },
+                    orderBy: {
+                        createdAt: 'asc'
+                    }
+                }
             },
             orderBy: {
                 createdAt: 'desc',
