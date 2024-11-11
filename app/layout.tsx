@@ -14,6 +14,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Streetheus | Admin',
   description: 'Streetheus admin dashboard for private use.',
+  openGraph: { images: ["/streetheus-logo.png"] },
+  icons: {
+    icon: "/app/favicon.ico",
+  },
 }
 
 export default function RootLayout({
