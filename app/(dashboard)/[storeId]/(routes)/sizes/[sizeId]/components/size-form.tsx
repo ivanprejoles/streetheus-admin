@@ -154,7 +154,7 @@ export const SizeForm: React.FC<SizeFormProps> = ({
                             )}
                         />
                     </div>
-                    <Button disabled={loading} className="ml-auto" type="submit">
+                    <Button variant="beige" disabled={loading} className="ml-auto" type="submit">
                         {action}
                     </Button>
                 </form>

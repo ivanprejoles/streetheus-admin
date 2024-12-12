@@ -19,7 +19,7 @@ const CategoryPage = async ({
     });
     
     return (
-        <div className="flex-col">
+        <div className="flex-col relative bg-[url('/beige-bg.png')] bg-cover bg-center bg-[#FDF0DA] min-h-screen">
             <div className="flex-1 space-y-4 p-8 pt-6">
                 <CategoryForm billboards={billboards} initialData={category} />
             </div>

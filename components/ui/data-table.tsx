@@ -61,17 +61,17 @@ export function DataTable<TData, TValue>({
           onChange={(event) =>
             table.getColumn(searchKey)?.setFilterValue(event.target.value)
           }
-          className="max-w-sm border-fuchsia-500"
+          className="max-w-sm "
         />
       </div>
-      <div className="rounded-md border border-fuchsia-500">
+      <div className="rounded-md border border-white">
         <Table>
-          <TableHeader className="border-fuchsia-500">
+          <TableHeader className="">
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id} className="border-fuchsia-500">
+              <TableRow key={headerGroup.id} className="border-white">
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id}>
+                    <TableHead key={header.id} className="text-white">
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -88,11 +88,12 @@ export function DataTable<TData, TValue>({
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
+                  
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell key={cell.id} className="border-white">
                       {cell.column.id === "imageSrc" ? (
                         <div className="w-full h-full aspect-square relative rounded-md overflow-hidden">
                             <Image

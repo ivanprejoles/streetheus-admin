@@ -77,7 +77,7 @@ const OrdersPage = async ({
     );
 
     return (
-        <div className="flex-col">
+        <div className="flex-col relative bg-[url('/beige-bg.png')] bg-cover bg-center bg-[#FDF0DA]">
             <div className="flex-1 space-y-4 p-8 pt-6">
                 <OrderClient data={formattedOrders} payment={allPaymentDetails} />
             </div>

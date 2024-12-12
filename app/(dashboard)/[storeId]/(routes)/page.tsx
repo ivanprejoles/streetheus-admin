@@ -22,17 +22,17 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
     const graphRevenue = await getGraphRevenue(params.storeId);
 
     return (
-        <div className="flex-col">
+        <div className="flex-col relative bg-[url('/beige-bg.png')] bg-cover bg-center bg-[#FDF0DA]">
             <div className="flex-1 space-y-4 p-8 pt-6">
                 <Heading title="Dashboard" description="Overview of your store" />
-                <Separator className="bg-fuchsia-500" />
+                <Separator className="bg-white" />
                 <div className="grid gap-4 grid-cols-3">
-                    <Card className="border-fuchsia-500">
+                    <Card className="bg-gradient-to-r from-[#947a70] to-[#bd9d92]  border-[#D7BE9A] border text-white">
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">
                                 Total Revenue
                             </CardTitle>
-                            <PhilippinePesoIcon className="h-4 w-4 text-muted-foreground text-fuchsia-600" />
+                            <PhilippinePesoIcon className="h-4 w-4 text-muted-foreground text-white" />
                         </CardHeader>
                         <CardContent>
                             <div className="text-2xl font-bold">
@@ -40,12 +40,12 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="border-fuchsia-500">
+                    <Card className="bg-gradient-to-r from-[#947a70] to-[#bd9d92]  border-[#D7BE9A] border text-white">
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">
                                 Sales
                             </CardTitle>
-                            <CreditCardIcon className="h-4 w-4 text-muted-foreground text-fuchsia-600" />
+                            <CreditCardIcon className="h-4 w-4 text-muted-foreground text-white" />
                         </CardHeader>
                         <CardContent>
                             <div className="text-2xl font-bold">
@@ -53,12 +53,12 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="border-fuchsia-500">
+                    <Card className="bg-gradient-to-r from-[#947a70] to-[#bd9d92]  border-[#D7BE9A] border text-white">
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">
                                 Products In Stock
                             </CardTitle>
-                            <Package className="h-4 w-4 text-muted-foreground text-fuchsia-600" />
+                            <Package className="h-4 w-4 text-muted-foreground text-white" />
                         </CardHeader>
                         <CardContent>
                             <div className="text-2xl font-bold">
@@ -67,13 +67,13 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
                         </CardContent>
                     </Card>
                 </div>
-                <Card className="col-span-4 border-fuchsia-500">
+                <Card className="col-span-4 bg-gradient-to-r from-[#947a70] to-[#bd9d92]  border-[#D7BE9A] border text-white">
                     <CardHeader>
                         <CardTitle>
                             Overview
                         </CardTitle>
                     </CardHeader>
-                    <CardContent className="pl-2">
+                    <CardContent className="pl-2 text-white">
                         <Overview data={graphRevenue} />
                     </CardContent>
                 </Card>

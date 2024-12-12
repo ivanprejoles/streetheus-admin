@@ -75,8 +75,8 @@ export function MainNav({
                 ? (
                     <div className="flex items-center justify-center ml-2 visible md:invisible">
                         <DropdownMenu>
-                            <DropdownMenuTrigger>
-                                <Menu className="h-8 w-8 text-muted-foreground" />
+                            <DropdownMenuTrigger className="border-white border rounded-md">
+                                <Menu className="h-8 w-8 text-white" />
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="start">
                                 <nav>
@@ -85,8 +85,8 @@ export function MainNav({
                                             <Link
                                                 href={route.href}
                                                 className={cn(
-                                                    "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-purple-500 hover:via-violet-500 hover:to-pink-500",
-                                                    route.active ? "relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500" : "text-muted-foreground"
+                                                    "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-[#D2B48C] hover:to-[#EEDC82] text-white",
+                                                    route.active ? "relative bg-clip-text bg-no-repeat bg-gradient-to-r from-[#D2B48C] to-[#EEDC82]" : "text-muted-foreground"
                                                 )}
                                             >
                                                 {route.label}
@@ -107,8 +107,8 @@ export function MainNav({
                                 key={route.href}
                                 href={route.href}
                                 className={cn(
-                                    "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-purple-500 hover:via-violet-500 hover:to-pink-500",
-                                    route.active ? "relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500" : "text-muted-foreground"
+                                    "text-sm font-medium transition-colors bg-clip-text hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r  hover:from-[#D2B48C] hover:to-[#EEDC82]",
+                                    route.active ? "relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-[#D2B48C] to-[#EEDC82]" : "text-white"
                                 )}
                             >
                                 {route.label}
