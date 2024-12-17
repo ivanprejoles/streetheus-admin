@@ -13,12 +13,7 @@ Features:
 * You will be able to create, update and delete "Billboards" which are these big texts on top of the page. You will be able to attach them to a single category, or use them standalone (Our Admin generates API for all of those cases)
 * You will be able to Search through all categories, products, sizes, colors, billboards with included pagination
 * You will be able to control which products are "featured" so they show on the homepage
-* You will be able to see your orders, sales, etc
-* You will be able to see graphs of your revenue etc
 * Clerk Authentication
-* Order creation
-* Stripe checkout
-* Stripe webhooks
 * MySQL + Prisma + PlanetScale
 
 ## Prerequisites
@@ -27,7 +22,7 @@ Features:
 
 ## Cloning the repository
 ```
-git clone https://github.com/aoyo-jun/e-commerce-admin.git
+git clone https://github.com/ivanprejoles/streetheus-admin.git
 ```
 ## Install packages
 ```
@@ -52,8 +47,6 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
 DATABASE_URL=''
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=""
-STRIPE_API_KEY=
-STRIPE_WEBHOOK_SECRET=
 
 FRONTEND_STORE_URL=
 ```
@@ -67,10 +60,3 @@ npx prisma db push
 ```
 npm run dev
 ```
-###### This README was partially copied from the original [next13-ecommerce-admin](https://github.com/AntonioErdeljac/next13-ecommerce-admin) repository.
-
-___
-
-Again, this amazing project is a [course](https://www.youtube.com/watch?v=5miHyP6lExg) by [Code with Antonio](https://www.youtube.com/@codewithantonio)!
-
-Another project following this awesome developer (aka Antonio), thank you so much for the learning experience 🙏
